@@ -1,0 +1,106 @@
+nav {
+    position: fixed;
+    top: 1rem;
+    width: 100vw;
+    z-index: 10000000;
+}
+
+.navbar {
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    background: #EEF0F4;
+    box-shadow: 3.3px 3.3px 4px #C6C7CB, -3.3px -3.3px 4px #FFFFFF;
+    align-items: center;
+}
+
+.logo {
+    height: 2.2rem;
+}
+
+.logo img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+    object-position: center;
+}
+
+.navbar ul {
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .6rem .7rem;
+}
+
+a li {
+    display: flex;
+    justify-content: center;
+    padding: 10px !important;
+    font-size: 18px;
+    border-radius: 50%;
+    background: #EEF0F4;
+    box-shadow: 3.3px 3.3px 4px #C6C7CB, -3.3px -3.3px 4px #FFFFFF;
+    gap: 6px;
+}
+
+a li:hover {
+    box-shadow: inset 2px 2px 5px #BABECC,
+        inset -5px -5px 10px #ffffff73;
+    display: flex;
+    justify-content: center;
+}
+
+a li .nav_icon {
+    height: 1.7rem;
+}
+
+a li .nav_icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+ul a {
+    font-size: 1rem;
+    color: black;
+}
+
+.search_container {
+    max-width: 500px;
+    width: 400px;
+    margin-right: .5rem;
+}
+
+.search_box {
+    display: flex;
+    font-size: 18px;
+    border-radius: 4px;
+    background: #EEF0F4;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3.3px 3.3px 4px #C6C7CB, -3.3px -3.3px 4px #FFFFFF;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.search_box input {
+    background: #EEF0F4;
+    flex-grow: 1;
+    text-indent: 10px;
+    height: 100%;
+    font-size: 1.1rem;
+    padding: .7rem 0rem;
+}
+
+.search_box button {
+    height: 2.6rem;
+}
+
+.search_box button img {
+    height: 100%;
+    width: 100%;
+}

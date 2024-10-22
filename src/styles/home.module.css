@@ -1,0 +1,86 @@
+.home {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.hero h1 {
+    font-size: 190px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero h1 span {
+    color: #4A69E2;
+}
+
+.mySwiper2 {
+    position: relative;
+    height: 650px;
+    border-radius: 64px;
+}
+
+.banner img {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.49), transparent);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scaleY(1.06);
+}
+
+.mySwiper2 .banner_text {
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 500px;
+    width: 90%;
+}
+
+.mySwiper2 .banner_text h1 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.mySwiper2 .banner_text p {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    width: 70%;
+}
+
+.mySwiper2 .banner_text button {
+    font-size: 14px;
+    width: 132px;
+    padding: .8rem 1rem;
+    color: white;
+    border-radius: 8px;
+    font-weight: 00;
+    letter-spacing: 1px;
+    background-color: #4A69E2;
+    cursor: pointer;
+}
+
+.swiper_slide {
+    height: 120px;
+    border-radius: 32px;
+    width: 120px !important;
+    flex-direction: row;
+    margin: .4rem;
+    overflow: hidden;
+    border: 3px solid white;
+}
+
+.swiper_slide img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.slider {
+    position: relative;
+}

@@ -1,0 +1,103 @@
+.shop {
+    margin-top: 9rem;
+}
+
+.shop_banner {
+    height: 400px;
+    background-image: url(../../public/images/shop-banner.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    object-fit: cover;
+    background-size: cover;
+    border-radius: 64px;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.shop_banner .shop_banner_text {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    z-index: 1000;
+    color: white;
+    left: 2.5rem;
+    width: 30%;
+}
+
+.shop_banner .shop_banner_text h1 {
+    font-size: 44px;
+    padding: .5rem 0;
+}
+
+.shop_banner .shop_banner_text em {
+    color: #E7E7E3;
+    font-size: 17px;
+}
+
+.shop_cataloge .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.shop_cataloge .heading .heading_text h2 {
+    font-size: 36px;
+}
+
+.shop_cataloge .heading select {
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cataloge {
+    display: flex;
+    gap: 20px;
+}
+
+.cataloge_filter {
+    width: 260px;
+}
+
+.cataloge_filter .cataloge_filter_heading h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.cataloge_list {
+    flex-grow: 1;
+    background-color: black;
+}
+
+.component_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    padding: .5rem 0;
+    height: auto;
+}
+
+.scroll_up{
+    height: 0;
+}
+
+.component_heading h5 {
+    font-size: 16px;
+}
+
+.component_heading button {
+    height: 24px;
+    width: 24px;
+    padding: .2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+.component_heading button img {
+    height: 100%;
+    width: 100%;
+}
