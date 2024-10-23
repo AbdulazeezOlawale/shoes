@@ -75,13 +75,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green;
-    padding: .5rem 0;
+    padding: .9rem 0;
     height: auto;
-}
-
-.scroll_up{
-    height: 0;
 }
 
 .component_heading h5 {
@@ -100,4 +95,70 @@
 .component_heading button img {
     height: 100%;
     width: 100%;
+}
+
+.component_body {
+    transition: all 1s ease;
+}
+
+.scroll_up {
+    transition: all 1s ease;
+    overflow: hidden;
+    height: 0;
+}
+
+.refine .component_body {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.refine .component_body .tag {
+    padding: 8px 10px;
+    border-radius: 6px;
+    background-color: #4A69E2;
+    font-size: 12px;
+    color: white;
+}
+
+.size .component_body {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.size .component_body button {
+    padding: 8px 10px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+}
+
+.size .component_body button:first-child {
+    background-color: #232321;
+    color: white;
+}
+
+.size .component_body button:nth-child(2),
+.size .component_body button:nth-child(3) {
+    background-color: #D2D1D3;
+    color: black;
+}
+
+.color .component_body {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.color .component_body button {
+    height: 29px;
+    width: 33px;
+    cursor: pointer;
+    border-radius: 6px;
 }
