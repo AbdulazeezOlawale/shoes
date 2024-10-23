@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styles from "../styles/shop.module.css"
 import SizeComponent from './SizeComponent';
+import SelectComponent from './SelectComponent';
+import Random from './Random';
+import { categoryData, colorData, sizeData } from '../store/Data';
+import Tag from './Tag';
 
 const Store = () => {
 
     const [isOpen, setIsOpen] = useState([true, true, true, true, true, true]);
-    
-    const sizeData = [38, 39, 40, 41, 42, 43, 44, 45, 46, 47];
-    const colorData = ["#4A69E2", "#FFA52F", "#232321", "#234D41", "#353336", "#F08155", "#C9CCC6", "#677282", "#925513", "#BB8056"];
     
     const toggle0 = () => {
         const updatedIsClicked = [...isOpen];
@@ -83,10 +84,7 @@ const Store = () => {
                                 </button>
                             </div>
                             <div className={isOpen[0] ? styles.component_body : styles.scroll_up}>
-                                <div className={styles.tag}>Casual</div>
-                                <div className={styles.tag}>Casual</div>
-                                <div className={styles.tag}>Casual</div>
-                                <div className={styles.tag}>Casual</div>
+                                <Tag styles = {styles}/>
                             </div>
                         </div>
 
@@ -122,7 +120,7 @@ const Store = () => {
                                 </button>
                             </div>
                             <div className={isOpen[3] ? styles.component_body : styles.scroll_up}>
-                                olawale
+                                <SelectComponent data = {categoryData}/>
                             </div>
                         </div>
 
@@ -134,7 +132,7 @@ const Store = () => {
                                 </button>
                             </div>
                             <div className={isOpen[4] ? styles.component_body : styles.scroll_up}>
-                                olawale
+                                <Random/>
                             </div>
                         </div>
 
