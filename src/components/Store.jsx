@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from "../styles/shop.module.css"
 import SizeComponent from './SizeComponent';
 import SelectComponent from './SelectComponent';
-import Random from './Random';
-import { categoryData, colorData, sizeData } from '../store/Data';
+import { categoryCheckbox, categoryData, colorData, genderCheckBox, genderData, sizeData } from '../store/Data';
 import Tag from './Tag';
+import Slider from './Slider';
 
 const Store = () => {
 
@@ -120,7 +120,7 @@ const Store = () => {
                                 </button>
                             </div>
                             <div className={isOpen[3] ? styles.component_body : styles.scroll_up}>
-                                <SelectComponent data = {categoryData}/>
+                                <SelectComponent data = {categoryData} checkData = {categoryCheckbox} name = {"category data"}/>
                             </div>
                         </div>
 
@@ -132,7 +132,7 @@ const Store = () => {
                                 </button>
                             </div>
                             <div className={isOpen[4] ? styles.component_body : styles.scroll_up}>
-                                <Random/>
+                                <SelectComponent data = {genderData} name={"gender data"} checkData={genderCheckBox}/> 
                             </div>
                         </div>
 
@@ -144,7 +144,7 @@ const Store = () => {
                                 </button>
                             </div>
                             <div className={isOpen[5] ? styles.component_body : styles.scroll_up}>
-                                olawale
+                                <Slider/>
                             </div>
                         </div>
                     </div>
