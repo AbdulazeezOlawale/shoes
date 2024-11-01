@@ -1,6 +1,5 @@
 nav {
-    position: fixed;
-    top: 1rem;
+    margin-top: 1rem;
     width: 100vw;
     z-index: 10000000;
 }
@@ -103,4 +102,27 @@ ul a {
 .search_box button img {
     height: 100%;
     width: 100%;
+}
+
+.reg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: .5rem;
+    text-transform: capitalize;
+}
+
+.reg .login {
+    margin-right: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 16px;
+    background-color: #BABECC;
+    color: #4A69E2;
+}
+
+.reg .sign_up {
+    padding: .5rem 1rem;
+    border-radius: 16px;
+    color: #FFFFFF;
+    background-color: #4A69E2;
 }

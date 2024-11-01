@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "name": "Nike Air Max 270",
+        "price": 150,
+        "description": "The Nike Air Max 270 combines performance and style with a lightweight feel.",
+        "category": "Men's Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/air-max-270.jpg",
+        "thumbnails": [
+            "https://example.com/images/air-max-270-front.jpg",
+            "https://example.com/images/air-max-270-back.jpg",
+            "https://example.com/images/air-max-270-side.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Nike Air Force 1",
+        "price": 110,
+        "description": "Classic style and comfort, the Air Force 1 is a timeless Nike silhouette.",
+        "category": "Men's Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/air-force-1.jpg",
+        "thumbnails": [
+            "https://example.com/images/air-force-1-front.jpg",
+            "https://example.com/images/air-force-1-back.jpg",
+            "https://example.com/images/air-force-1-side.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Nike React Infinity Run",
+        "price": 160,
+        "description": "Built for stability and comfort, the React Infinity Run is ideal for runners.",
+        "category": "Women's Shoes",
+        "inStock": false,
+        "image": "https://example.com/images/react-infinity-run.jpg",
+        "thumbnails": [
+            "https://example.com/images/react-infinity-run-front.jpg",
+            "https://example.com/images/react-infinity-run-back.jpg",
+            "https://example.com/images/react-infinity-run-side.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Nike ZoomX Vaporfly",
+        "price": 250,
+        "description": "Engineered for speed, the Vaporfly is a marathoner’s dream.",
+        "category": "Men's Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/zoomx-vaporfly.jpg",
+        "thumbnails": [
+            "https://example.com/images/zoomx-vaporfly-front.jpg",
+            "https://example.com/images/zoomx-vaporfly-back.jpg",
+            "https://example.com/images/zoomx-vaporfly-side.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Nike Pegasus Trail 3",
+        "price": 130,
+        "description": "Trail-ready design with rugged traction for outdoor runs.",
+        "category": "Men's Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/pegasus-trail-3.jpg",
+        "thumbnails": [
+            "https://example.com/images/pegasus-trail-3-front.jpg",
+            "https://example.com/images/pegasus-trail-3-back.jpg",
+            "https://example.com/images/pegasus-trail-3-side.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Nike Dunk Low",
+        "price": 100,
+        "description": "The classic Nike Dunk with a low profile and vibrant colors.",
+        "category": "Women's Shoes",
+        "inStock": false,
+        "image": "https://example.com/images/dunk-low.jpg",
+        "thumbnails": [
+            "https://example.com/images/dunk-low-front.jpg",
+            "https://example.com/images/dunk-low-back.jpg",
+            "https://example.com/images/dunk-low-side.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Nike Blazer Mid '77 Vintage",
+        "price": 110,
+        "description": "Retro style with modern comfort in the Blazer Mid '77 Vintage.",
+        "category": "Unisex Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/blazer-mid-77.jpg",
+        "thumbnails": [
+            "https://example.com/images/blazer-mid-77-front.jpg",
+            "https://example.com/images/blazer-mid-77-back.jpg",
+            "https://example.com/images/blazer-mid-77-side.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Nike Air Zoom Pegasus 39",
+        "price": 120,
+        "description": "Everyday running shoe with superior responsiveness.",
+        "category": "Women's Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/pegasus-39.jpg",
+        "thumbnails": [
+            "https://example.com/images/pegasus-39-front.jpg",
+            "https://example.com/images/pegasus-39-back.jpg",
+            "https://example.com/images/pegasus-39-side.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Nike Metcon 7",
+        "price": 130,
+        "description": "A stable base for weightlifting with enhanced durability for CrossFit.",
+        "category": "Men's Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/metcon-7.jpg",
+        "thumbnails": [
+            "https://example.com/images/metcon-7-front.jpg",
+            "https://example.com/images/metcon-7-back.jpg",
+            "https://example.com/images/metcon-7-side.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Nike Air VaporMax Plus",
+        "price": 210,
+        "description": "A unique combination of VaporMax cushioning and bold styling.",
+        "category": "Women's Shoes",
+        "inStock": false,
+        "image": "https://example.com/images/vapormax-plus.jpg",
+        "thumbnails": [
+            "https://example.com/images/vapormax-plus-front.jpg",
+            "https://example.com/images/vapormax-plus-back.jpg",
+            "https://example.com/images/vapormax-plus-side.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Nike Free RN 5.0",
+        "price": 100,
+        "description": "Natural feel with the flexibility and minimalism of Nike Free technology.",
+        "category": "Men's Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/free-rn-5.jpg",
+        "thumbnails": [
+            "https://example.com/images/free-rn-5-front.jpg",
+            "https://example.com/images/free-rn-5-back.jpg",
+            "https://example.com/images/free-rn-5-side.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Nike Joyride Dual Run",
+        "price": 130,
+        "description": "Joyride cushioning offers smooth comfort for long runs.",
+        "category": "Women's Shoes",
+        "inStock": true,
+        "image": "https://example.com/images/joyride-dual-run.jpg",
+        "thumbnails": [
+            "https://example.com/images/joyride-dual-run-front.jpg",
+            "https://example.com/images/joyride-dual-run-back.jpg",
+            "https://example.com/images/joyride-dual-run-side.jpg"
+        ]
+    }
+]

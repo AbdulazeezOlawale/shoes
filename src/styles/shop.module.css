@@ -1,5 +1,5 @@
 .shop {
-    margin-top: 9rem;
+    margin-top: 3rem;
 }
 
 .shop_banner {
@@ -18,7 +18,7 @@
     position: absolute;
     bottom: 50%;
     transform: translateY(50%);
-    z-index: 1000;
+    /* z-index: 1000; */
     color: white;
     left: 2.5rem;
     width: 30%;
@@ -32,6 +32,10 @@
 .shop_banner .shop_banner_text em {
     color: #E7E7E3;
     font-size: 17px;
+}
+
+.shop * {
+    font-weight: lighter;
 }
 
 .shop_cataloge .heading {
@@ -59,6 +63,7 @@
 
 .cataloge_filter {
     width: 260px;
+    margin-bottom: 1rem;
 }
 
 .cataloge_filter .cataloge_filter_heading h3 {
@@ -68,7 +73,6 @@
 
 .cataloge_list {
     flex-grow: 1;
-    background-color: black;
 }
 
 .component_heading {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "../styles/shop.module.css"
 import SizeComponent from './SizeComponent';
 import SelectComponent from './SelectComponent';
@@ -7,6 +7,18 @@ import Tag from './Tag';
 import Slider from './Slider';
 
 const Store = () => {
+
+    useEffect(() => {
+        fetch('https://e-commerce-backend-9a82.onrender.com/products/')
+            .then((res) => (
+                res.json()
+            ))
+            .then((data) => (
+                console.log(data)
+                
+            ))
+    }, [])
+    
 
     const [isOpen, setIsOpen] = useState([true, true, true, true, true, true]);
     
@@ -148,7 +160,9 @@ const Store = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.cataloge_list}></div>
+                    <div className={styles.cataloge_list}>
+                        <img src="https://example.com/images/nike-react-infinity.jpg" alt="" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -40,11 +40,19 @@ const NavBar = () => {
                     </li>
                 </Link>
             </ul>
+
             <div className={styles.logo}>
                 <img src="./images/logo.png" alt="logo" />
             </div>
             
+            <div className={styles.reg}>
+                <Link className={styles.login} to='/login'>Login</Link>
+                <Link className={styles.sign_up} to='/signup'>signup</Link>
+            </div>
+
             <div className={styles.search_container}>
+                
+
                 <form className={styles.search_box}>
                     <input placeholder='search...' type="text" className={styles.input_search}/>
                     <button>
