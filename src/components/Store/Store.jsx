@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import styles from "../styles/shop.module.css"
+import styles from "../Store/shop.module.css"
 import SizeComponent from './SizeComponent';
 import SelectComponent from './SelectComponent';
-import { categoryCheckbox, categoryData, colorData, genderCheckBox, genderData, sizeData } from '../store/Data';
+import { categoryCheckbox, categoryData, colorData, genderCheckBox, genderData, sizeData } from '../../store/Data';
 import Tag from './Tag';
 import Slider from './Slider';
 

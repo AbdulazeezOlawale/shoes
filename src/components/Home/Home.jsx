@@ -10,7 +10,7 @@ import 'swiper/css/thumbs';
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
-import styles from "../styles/home.module.css"
+import styles from "../Home/home.module.css"
 
 const Home = () => {
 

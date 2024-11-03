@@ -4,3 +4,4 @@ export const categoryData = ["Casual shoes", "Runners", "Hiking", "Basketball", 
 export const genderData = ["Male", "Female"];
 export const categoryCheckbox = [false, false, false, false, false, false];
 export const genderCheckBox = [false, false];
+// const clientSecret = "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";

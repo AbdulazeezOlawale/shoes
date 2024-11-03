@@ -4,7 +4,7 @@
 
 .shop_banner {
     height: 400px;
-    background-image: url(../../public/images/shop-banner.jpg);
+    background-image: url(../../../public/images/shop-banner.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     object-fit: cover;

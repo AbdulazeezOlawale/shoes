@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from "../styles/slider.module.css"
+import styles from "../Store/slider.module.css"
 
 const Slider = () => {
     const [sliderValue, setSliderValue] = useState(0);

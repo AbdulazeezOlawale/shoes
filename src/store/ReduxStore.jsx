@@ -3,22 +3,24 @@ import { createStore, applyMiddleware } from 'redux';
 // Load initial state from localStorage
 const loadStateFromLocalStorage = () => {
   try {
-    const serializedState = localStorage.getItem('selectedItems');
-    if (serializedState === null) {
-      return { selectedItems: [] };
-    }
-    return { selectedItems: JSON.parse(serializedState) };
+    const serializedItems = localStorage.getItem('selectedItems');
+    const serializedUser = localStorage.getItem('user');
+    
+    return {
+      selectedItems: serializedItems ? JSON.parse(serializedItems) : [],
+      user: serializedUser ? JSON.parse(serializedUser) : null
+    };
   } catch (error) {
     console.error('Failed to load state from localStorage:', error);
-    return { selectedItems: [] };
+    return { selectedItems: [], user: null };
   }
 };
 
 // Save state to localStorage
 const saveStateToLocalStorage = (state) => {
   try {
-    const serializedState = JSON.stringify(state.selectedItems);
-    localStorage.setItem('selectedItems', serializedState);
+    localStorage.setItem('selectedItems', JSON.stringify(state.selectedItems));
+    localStorage.setItem('user', JSON.stringify(state.user));
   } catch (error) {
     console.error('Failed to save state to localStorage:', error);
   }
@@ -34,18 +36,44 @@ const localStorageMiddleware = (store) => (next) => (action) => {
 // Initial state from localStorage or default
 const initialState = loadStateFromLocalStorage();
 
+// Action Types
+const SELECT_ITEM = 'SELECT_ITEM';
+const DESELECT_ITEM = 'DESELECT_ITEM';
+const SET_USER = 'SET_USER';
+const CLEAR_USER = 'CLEAR_USER';
+
+// Action Creators
+export const setUser = (userData) => ({
+  type: SET_USER,
+  payload: userData
+});
+
+export const clearUser = () => ({
+  type: CLEAR_USER
+});
+
 // Reducer function
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SELECT_ITEM':
+    case SELECT_ITEM:
       return {
         ...state,
         selectedItems: [...state.selectedItems, action.payload],
       };
-    case 'DESELECT_ITEM':
+    case DESELECT_ITEM:
       return {
         ...state,
         selectedItems: state.selectedItems.filter((item) => item !== action.payload),
+      };
+    case SET_USER:
+      return {
+        ...state,
+        user: action.payload
+      };
+    case CLEAR_USER:
+      return {
+        ...state,
+        user: null
       };
     default:
       return state;

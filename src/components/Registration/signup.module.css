@@ -1,0 +1,164 @@
+.signup_container {
+    display: flex;
+    align-items: center;
+}
+
+.container_img,
+.container_form {
+    flex: 1;
+}
+
+.container_img img {
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.container_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container_form .form_btn {
+    background-color: #ffffff;
+    padding: .6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 350px;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.container_form .form_btn button {
+    flex: 1;
+    border-radius: 8px;
+    padding: .6rem 0;
+    font-size: 16px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container_form .form_btn button.active_form_btn {
+    background-color: #4A69E2;
+    color: white;
+}
+
+.container_form .form {
+    display: block;
+}
+
+.form .heading {
+    margin-bottom: 3rem;
+}
+
+.form .heading h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.form .heading small {
+    font-size: 1rem;
+}
+
+.container_form .input_fields form {
+    width: 100%;
+}
+
+.container_form .input_fields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container_form .input_fields label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: .4rem;
+}
+
+.container_form .input_fields input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid #79767C;
+}
+
+.google_reg {
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+.google_reg .reg_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+.google_reg .reg_heading span {
+    flex: 1;
+    font-size: 12px;
+    height: 1px;
+    background-color: grey;
+}
+
+.google_reg .reg_heading small {
+    font-size: 16px;
+}
+
+.google_reg button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: .5rem 0;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
+}
+
+.google_reg button .img {
+    height: 30px;
+    width: 30px;
+}
+
+.google_reg button .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container_form .input_footer small {
+    font-size: 15px;
+    text-align: center;
+    display: block;
+}
+
+.container_form .input_footer small button {
+    background-color: transparent;
+    color: #4A69E2;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.container_form .input_footer small button:hover {
+    transition: all .3s ease-in-out;
+    text-decoration: underline;
+}

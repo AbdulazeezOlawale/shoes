@@ -72,6 +72,9 @@ ul a {
     max-width: 500px;
     width: 400px;
     margin-right: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .search_box {
@@ -113,16 +116,15 @@ ul a {
 }
 
 .reg .login {
-    margin-right: .5rem;
-    padding: .5rem 1rem;
-    border-radius: 16px;
-    background-color: #BABECC;
-    color: #4A69E2;
-}
-
-.reg .sign_up {
     padding: .5rem 1rem;
     border-radius: 16px;
     color: #FFFFFF;
     background-color: #4A69E2;
+    transform: translateX(60%);
+    transition: all .3s ease-in-out;
+}
+
+.reg .login:hover {
+    color: #4A69E2;
+    background-color: white;
 }

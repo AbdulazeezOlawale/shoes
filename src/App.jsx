@@ -1,14 +1,19 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
-import Store from './components/Store'
-import NavBar from './components/NavBar'
-import Contact from './components/Contact'
+import Home from './components/Home/Home'
+import Store from './components/Store/Store'
+import NavBar from './components/Navbar/NavBar'
 import Headroom from 'react-headroom'
-import SignUp from './components/SignUp'
-import SignIn from './components/SignIn'
+import SignUp from './components/Registration/SignUp'
+import Cart from './components/cart/Cart'
+import Profile from './components/profile/Profile'
+import { useSelector } from 'react-redux'
 
 const App = () => {
+  
+  // access google oauth data from redux
+  const user = useSelector((state) => state.user);
+
   return (
     <div>
       <div className="nav-bar">
@@ -20,10 +25,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path='/signup' element={<SignUp/>}/>
-        <Route path='/login' element={<SignIn/>}/>
+        {
+          !user && <Route path='/signup' element={<SignUp/>}/>
+        }
       </Routes>
 
       <footer className="footer container">

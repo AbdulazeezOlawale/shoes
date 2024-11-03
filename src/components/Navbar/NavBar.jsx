@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from  '../styles/navbar.module.css';
+import styles from  '../Navbar/navbar.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearUser } from '../../store/ReduxStore';
 
 const NavBar = () => {
+    
+    const dispatch = useDispatch();
+
+    const handleLogout = () => {
+        dispatch(clearUser()); // Dispatch the CLEAR_USER action to reset user state
+        localStorage.removeItem('user'); // Optional: Remove from localStorage if needed
+    };
+
+  const user = useSelector((state) => state.user);
+
   return (
     <nav>
         <div className={`container ${styles.navbar}`}>
@@ -24,7 +36,7 @@ const NavBar = () => {
                     </li>
                 </Link>
 
-                <Link to="/contact">
+                <Link to="/cart">
                     <li>
                         <div className={styles.nav_icon}>
                             <img src="https://img.icons8.com/?size=100&id=kqlTT3Fp2Ga1&format=png&color=000000" alt="contact" />
@@ -32,26 +44,29 @@ const NavBar = () => {
                     </li>
                 </Link>
 
-                <Link to="/contact">
-                    <li>
-                        <div className={styles.nav_icon}>
-                            <img src="https://img.icons8.com/?size=100&id=0j6tDxtI4hv1&format=png&color=000000" alt="contact" />
-                        </div>
-                    </li>
-                </Link>
+                {
+                    user && <Link to="/profile">
+                        <li>
+                            <div className={styles.nav_icon}>
+                                <img src="https://img.icons8.com/?size=100&id=0j6tDxtI4hv1&format=png&color=000000" alt="contact" />
+                            </div>
+                        </li>
+                    </Link>
+                }
             </ul>
 
             <div className={styles.logo}>
                 <img src="./images/logo.png" alt="logo" />
             </div>
-            
-            <div className={styles.reg}>
-                <Link className={styles.login} to='/login'>Login</Link>
-                <Link className={styles.sign_up} to='/signup'>signup</Link>
-            </div>
 
-            <div className={styles.search_container}>
-                
+            <div className={styles.search_container}>  
+                {
+                    !user ? <div className={styles.reg}>
+                        <Link className={styles.login} to='/signup'>Login</Link>
+                    </div> : <div onClick={() => handleLogout()} className={styles.reg}>
+                        <Link className={styles.login} to='/'>Logout</Link>
+                    </div>
+                }  
 
                 <form className={styles.search_box}>
                     <input placeholder='search...' type="text" className={styles.input_search}/>

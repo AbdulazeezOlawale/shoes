@@ -26,6 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #E7E7E3;
+  overflow-x: hidden;
 }
 
 code {
@@ -53,6 +54,7 @@ p {
 .footer {
   background-color: #4A69E2;
   border-radius: 48px;
+  margin-bottom: 3rem;
 }
 
 .footer_top {

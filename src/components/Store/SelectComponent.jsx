@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import styles from '../styles/shop.module.css'
+import styles from '../Store/shop.module.css'
 
 const SelectComponent = ({data, checkData, name}) => {
     const checkedList = checkData;
