@@ -1,10 +1,14 @@
 import { jwtDecode } from 'jwt-decode';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { setUser } from '../../store/ReduxStore';
 import { useDispatch } from 'react-redux';
 
 const LoginForm = ({styles, name, func}) => {
 
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState('');
+
+  // logging in with google
   const dispatch = useDispatch();
 
   const handleCallbackResponse = (response) => {
@@ -14,6 +18,7 @@ const LoginForm = ({styles, name, func}) => {
 
     // Dispatch the user data to Redux store
     dispatch(setUser(userObject));
+    window.location.href = '/';
   };
 
   useEffect(() => {
@@ -28,25 +33,77 @@ const LoginForm = ({styles, name, func}) => {
       {theme: "outline", size: "large"}
     )
   })
-  
+
+  // logging in through postman's data
+  async function loginUser(email, password) {
+    try {
+
+
+    console.log('Attempting login with:', { email, password });
+
+      const response = await fetch('https://e-commerce-backend-9a82.onrender.com/auth/token/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json(); // parse error message if available
+        throw new Error(`Login failed: ${errorData?.message || 'Unknown error'}`);
+      }
+
+      const data = await response.json();
+      console.log('Login successful:', data);
+      return data; // Return data to handle it in handleLogin if needed
+    } catch (error) {
+      console.error('Error logging in:', error.message);
+      throw error; // Re-throw the error if you need to handle it in the caller
+    }
+  }
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const userData = await loginUser(email, password);
+      console.log('User data:', userData);
+      // handle login success actions here, like storing user data
+    } catch (error) {
+      console.error('Login error:', error);
+      // Optionally, display error to the user
+    }
+  };
+
 
   return (
-    <form action="">
+    <form onSubmit={handleLogin}>
         <div className={styles.heading}>
             <h1>{name[0]}</h1>
             <small>{name[1]}</small>
         </div>
 
         <div className={styles.input_fields}>
-            <label htmlFor="email">Email*</label>
-            <input id='email' placeholder='Email' type="email" />
+          <label htmlFor="email">Email*</label>
+          <input 
+            id='email' 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            placeholder='Email' 
+            type="email" 
+          />
 
-            <label htmlFor="password">Password*</label>
-            <input id='password' placeholder='Password' type="password" />
-
-            <label htmlFor="repassword">Confirm Password*</label>
-            <input id='repassword' placeholder='Password' type="password" />
-            <input type="submit" value="SUBMIT" />
+          <label htmlFor="password">Password*</label>
+          <input 
+            id='password' 
+            placeholder='Password' 
+            type="password"
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+          />
+          
+          <input type="submit" value="SUBMIT" />
         </div>
 
         <div className={styles.google_reg}>
