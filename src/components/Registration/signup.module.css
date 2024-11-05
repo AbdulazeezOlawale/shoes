@@ -1,6 +1,7 @@
 .signup_container {
     display: flex;
     align-items: center;
+    margin: 2rem auto;
 }
 
 .container_img,
@@ -29,6 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     max-width: 350px;
     border-radius: 16px;
     width: 100%;
@@ -41,6 +43,12 @@
     font-size: 16px;
     background-color: transparent;
     cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
+}
+
+.container_form .form_btn button:hover {
+    border: 1px solid #4A69E2;
 }
 
 .container_form .form_btn button.active_form_btn {
@@ -90,6 +98,24 @@
     background-color: transparent;
     border-radius: 8px;
     border: 1px solid #79767C;
+}
+
+.container_form .input_fields button {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid #79767C;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.container_form .input_fields button:hover {
+    background-color: #79767C;
+    color: white;
+    border: 1px solid transparent;
 }
 
 .google_reg {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Store from './components/Store/Store'
@@ -13,6 +13,8 @@ const App = () => {
   
   // access google oauth data from redux
   const user = useSelector((state) => state.user);
+  const auth_token = useSelector((state) => state.authToken);
+  
 
   return (
     <div>
@@ -29,7 +31,7 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         {
-          !user && <Route path='/signup' element={<SignUp/>}/>
+          (user === null && auth_token === null) && <Route path='/register' element={<SignUp/>}/>
         }
       </Routes>
 

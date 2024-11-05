@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from  '../Navbar/navbar.module.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,6 +14,12 @@ const NavBar = () => {
     };
 
   const user = useSelector((state) => state.user);
+  const auth_token = useSelector((state) => state.authToken);
+
+  console.log(user, auth_token);
+  
+  
+  
 
   return (
     <nav>
@@ -45,7 +51,7 @@ const NavBar = () => {
                 </Link>
 
                 {
-                    user && <Link to="/profile">
+                    (user || auth_token) && <Link to="/profile">
                         <li>
                             <div className={styles.nav_icon}>
                                 <img src="https://img.icons8.com/?size=100&id=0j6tDxtI4hv1&format=png&color=000000" alt="contact" />
@@ -60,13 +66,18 @@ const NavBar = () => {
             </div>
 
             <div className={styles.search_container}>  
+
                 {
-                    !user ? <div className={styles.reg}>
-                        <Link className={styles.login} to='/signup'>Login</Link>
-                    </div> : <div onClick={() => handleLogout()} className={styles.reg}>
-                        <Link className={styles.login} to='/'>Logout</Link>
+                    (user === null && auth_token === null) && <div className={styles.reg}>
+                        <Link className={styles.signup} to='/register'>Sign Up</Link>
+                    </div> 
+                } 
+
+                {
+                    (user !== null || auth_token !== null) && <div onClick={() => handleLogout()} className={styles.reg}>
+                        <Link className={styles.signup} to='/'>Logout</Link>
                     </div>
-                }  
+                }
 
                 <form className={styles.search_box}>
                     <input placeholder='search...' type="text" className={styles.input_search}/>

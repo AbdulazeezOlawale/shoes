@@ -4,17 +4,18 @@ import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
 
 const SignUp = () => {
-  const [name, setName] = useState(["Welcome Back  👋", "We are happy to have you back"]);
-  const [tag, settag] = useState("Log In");
+
+  const [name, setName] = useState(["Welcome Back👋", "We are happy to have you back"]);
+  const [tag, settag] = useState("Sign Up");
   
   const chanageToSignUp = () => {
     settag("Sign Up");
-    setName(["Create an Account  👋", "Kindly fill in your details to create an account"]);
+    setName(["Create an Account👋", "Kindly fill in your details to create an account"]);
   }
   
   const changeToLogin = () => {
     settag("Log In");
-    setName(["Welcome Back  👋", "We are happy to have you back"]);
+    setName(["Welcome Back👋", "We are happy to have you back"]);
   }
  
 

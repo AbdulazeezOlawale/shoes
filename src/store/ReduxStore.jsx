@@ -5,14 +5,16 @@ const loadStateFromLocalStorage = () => {
   try {
     const serializedItems = localStorage.getItem('selectedItems');
     const serializedUser = localStorage.getItem('user');
-    
+    const authToken = localStorage.getItem('authToken');
+
     return {
       selectedItems: serializedItems ? JSON.parse(serializedItems) : [],
-      user: serializedUser ? JSON.parse(serializedUser) : null
+      user: serializedUser ? JSON.parse(serializedUser) : null,
+      authToken: authToken ? JSON.parse(authToken) : null
     };
   } catch (error) {
     console.error('Failed to load state from localStorage:', error);
-    return { selectedItems: [], user: null };
+    return { selectedItems: [], user: null, authToken: null };
   }
 };
 
@@ -21,6 +23,7 @@ const saveStateToLocalStorage = (state) => {
   try {
     localStorage.setItem('selectedItems', JSON.stringify(state.selectedItems));
     localStorage.setItem('user', JSON.stringify(state.user));
+    localStorage.setItem('authToken', state.authToken);
   } catch (error) {
     console.error('Failed to save state to localStorage:', error);
   }
@@ -41,11 +44,17 @@ const SELECT_ITEM = 'SELECT_ITEM';
 const DESELECT_ITEM = 'DESELECT_ITEM';
 const SET_USER = 'SET_USER';
 const CLEAR_USER = 'CLEAR_USER';
+const SET_AUTH_TOKEN = 'SET_AUTH_TOKEN';
 
 // Action Creators
 export const setUser = (userData) => ({
   type: SET_USER,
   payload: userData
+});
+
+export const setAuthToken = (token) => ({
+  type: SET_AUTH_TOKEN,
+  payload: token
 });
 
 export const clearUser = () => ({
@@ -70,10 +79,16 @@ const reducer = (state = initialState, action) => {
         ...state,
         user: action.payload
       };
+    case SET_AUTH_TOKEN:
+      return {
+        ...state,
+        authToken: action.payload
+      };
     case CLEAR_USER:
       return {
         ...state,
-        user: null
+        user: null,
+        authToken: null
       };
     default:
       return state;

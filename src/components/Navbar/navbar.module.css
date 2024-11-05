@@ -69,12 +69,12 @@ ul a {
 }
 
 .search_container {
-    max-width: 500px;
-    width: 400px;
-    margin-right: .5rem;
+    /* max-width: 500px; */
+    /* width: 400px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: .5rem;
 }
 
 .search_box {
@@ -108,23 +108,22 @@ ul a {
 }
 
 .reg {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: .5rem;
     text-transform: capitalize;
+    transform: translateX(-40%);
+
 }
 
-.reg .login {
+.reg .signup {
     padding: .5rem 1rem;
     border-radius: 16px;
     color: #FFFFFF;
     background-color: #4A69E2;
-    transform: translateX(60%);
     transition: all .3s ease-in-out;
+    border: 1px solid transparent;
 }
 
-.reg .login:hover {
+.reg .signup:hover {
+    border: 1px solid #4A69E2;
     color: #4A69E2;
-    background-color: white;
+    background-color: transparent;
 }

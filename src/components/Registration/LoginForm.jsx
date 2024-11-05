@@ -1,6 +1,6 @@
 import { jwtDecode } from 'jwt-decode';
 import React, { useEffect, useState } from 'react'
-import { setUser } from '../../store/ReduxStore';
+import { setUser, setAuthToken } from '../../store/ReduxStore';
 import { useDispatch } from 'react-redux';
 
 const LoginForm = ({styles, name, func}) => {
@@ -37,9 +37,7 @@ const LoginForm = ({styles, name, func}) => {
   // logging in through postman's data
   async function loginUser(email, password) {
     try {
-
-
-    console.log('Attempting login with:', { email, password });
+      console.log('Attempting login with:', { email, password });
 
       const response = await fetch('https://e-commerce-backend-9a82.onrender.com/auth/token/login', {
         method: 'POST',
@@ -55,6 +53,8 @@ const LoginForm = ({styles, name, func}) => {
       }
 
       const data = await response.json();
+      dispatch(setAuthToken(data.auth_token));
+
       console.log('Login successful:', data);
       return data; // Return data to handle it in handleLogin if needed
     } catch (error) {
@@ -87,11 +87,12 @@ const LoginForm = ({styles, name, func}) => {
         <div className={styles.input_fields}>
           <label htmlFor="email">Email*</label>
           <input 
-            id='email' 
+            id='email'
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
             placeholder='Email' 
             type="email" 
+            required
           />
 
           <label htmlFor="password">Password*</label>
@@ -100,10 +101,11 @@ const LoginForm = ({styles, name, func}) => {
             placeholder='Password' 
             type="password"
             value={password} 
+            required
             onChange={(e) => setPassword(e.target.value)} 
           />
           
-          <input type="submit" value="SUBMIT" />
+          <button>SUBMIT</button>
         </div>
 
         <div className={styles.google_reg}>
