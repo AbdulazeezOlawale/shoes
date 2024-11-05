@@ -12,13 +12,13 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 import styles from "../Home/home.module.css"
 
-const Home = () => {
-
+const Home = ({ToastContainer}) => {
     
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <section className={styles.home}>
+        <ToastContainer/>
         <div className={styles.hero}>
             <h1>DO IT <span> RIGHT</span> </h1>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Store from './components/Store/Store'
@@ -8,8 +8,13 @@ import SignUp from './components/Registration/SignUp'
 import Cart from './components/cart/Cart'
 import Profile from './components/profile/Profile'
 import { useSelector } from 'react-redux'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const App = () => {
+
+	const notify = () => toast.success("Login successful !");
   
   // access google oauth data from redux
   const user = useSelector((state) => state.user);
@@ -25,13 +30,13 @@ const App = () => {
       </div>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home ToastContainer = {ToastContainer}/>} />
         <Route path="/store" element={<Store />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         {
-          (user === null && auth_token === null) && <Route path='/register' element={<SignUp/>}/>
+          (user === null && auth_token === null) && <Route path='/register' element={<SignUp notifyMe = {notify}/>}/>
         }
       </Routes>
 

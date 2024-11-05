@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-const SignUpForm = ({styles, name, func}) => {
-  
+const SignUpForm = ({styles, name, func, toast}) => {
+
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -9,9 +9,7 @@ const SignUpForm = ({styles, name, func}) => {
   // logging in through postman's data
   async function signupUser(email, password, confirmPassword) {
     try {
-
-
-    console.log('Attempting sign up with:', { email, password, confirmPassword });
+      console.log('Attempting sign up with:', { email, password, confirmPassword });
 
       const response = await fetch('https://e-commerce-backend-9a82.onrender.com/auth/users/', {
         method: 'POST',
@@ -43,6 +41,7 @@ const SignUpForm = ({styles, name, func}) => {
       console.log('User data:', userData);
       func();
       // handle signup success actions here, like storing user data
+      toast();
     } catch (error) {
       console.error('Signup error:', error);
       // Optionally, display error to the user
@@ -50,7 +49,7 @@ const SignUpForm = ({styles, name, func}) => {
   };
 
   return (
-    <form onSubmit={handleSignup}>        
+    <form onSubmit={handleSignup}>  
         <div className={styles.heading}>
             <h1>{name[0]}</h1>
             <small>{name[1]}</small>
