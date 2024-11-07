@@ -42,7 +42,6 @@ a li {
     font-size: 18px;
     border-radius: 50%;
     background: #EEF0F4;
-    box-shadow: 3.3px 3.3px 4px #C6C7CB, -3.3px -3.3px 4px #FFFFFF;
     gap: 6px;
 }
 

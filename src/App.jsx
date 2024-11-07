@@ -33,7 +33,9 @@ const App = () => {
         <Route path="/" element={<Home ToastContainer = {ToastContainer}/>} />
         <Route path="/store" element={<Store />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/profile" element={<Profile />} />
+        {
+          (user !== null && auth_token !== null) && <Route path="/profile" element={<Profile />} />
+        }
         <Route path="*" element={<Navigate to="/" replace />} />
         {
           (user === null && auth_token === null) && <Route path='/register' element={<SignUp notifyMe = {notify}/>}/>
@@ -88,7 +90,9 @@ const App = () => {
             <img src="./images/footer-img2.png" alt="" />
           </div>
         </div>
+
       </footer>
+      <p style={{textAlign: "center", marginBottom: "1rem"}} className='container'>All rights reserved | Made by <span style={{color: "#4A69E2"}}>Õriõn</span></p>
     </div>
     
   )

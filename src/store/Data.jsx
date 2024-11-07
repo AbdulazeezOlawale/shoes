@@ -4,3 +4,8 @@ export const categoryData = ["Casual shoes", "Runners", "Hiking", "Basketball", 
 export const genderData = ["Male", "Female"];
 export const categoryCheckbox = [false, false, false, false, false, false];
 export const genderCheckBox = [false, false];
+export const reviews = [
+    {title: "Good Quality", desc: "I highly recommend shopping from kicks", photo: "/photo-1.png", rating: "/rating.png", frame: "/frame-1.png"},
+    {title: "Good Quality", desc: "I highly recommend shopping from kicks", photo: "/photo-2.png", rating: "/rating.png", frame: "/frame-2.png"},
+    {title: "Good Quality", desc: "I highly recommend shopping from kicks", photo: "/photo-3.png", rating: "/rating.png", frame: "/frame-3.png"}
+]

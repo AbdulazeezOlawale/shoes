@@ -11,6 +11,8 @@ import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 import styles from "../Home/home.module.css"
+import SportCompany from './SportCompany';
+import Reviews from './Reviews';
 
 const Home = ({ToastContainer}) => {
     
@@ -77,6 +79,13 @@ const Home = ({ToastContainer}) => {
             </Swiper>
         </div>
         
+        <section className='container'>
+            <SportCompany styles = {styles}/>
+        </section>
+
+        <section>
+            <Reviews styles = {styles}/>
+        </section>
     </section>
   )
 }
