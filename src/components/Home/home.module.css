@@ -111,12 +111,13 @@
 
 .reviews {
     margin-bottom: 6rem;
+    margin-top: 3rem;
 }
 
 .reviews h1 {
-    font-size: 60px;
+    font-size: 45px;
     font-weight: 400;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
 .reviews ul {
@@ -166,4 +167,10 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.shop_by_class h1 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 40px;
 }

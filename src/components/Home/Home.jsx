@@ -13,6 +13,7 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import styles from "../Home/home.module.css"
 import SportCompany from './SportCompany';
 import Reviews from './Reviews';
+import ShopByClass from '../Store/ShopByClass';
 
 const Home = ({ToastContainer}) => {
     
@@ -29,7 +30,7 @@ const Home = ({ToastContainer}) => {
             </div>
         </div>
 
-        <div className={`${styles.slider} container` }>
+        <div className={`${styles.slider} slider container` }>
 
             <Swiper
                 style={{
@@ -37,7 +38,7 @@ const Home = ({ToastContainer}) => {
                 '--swiper-pagination-color': '#fff',
                 }}
                 loop={true}
-                spaceBetween={10}
+                spaceBetween={0}
                 navigation={false}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs]}
@@ -81,6 +82,10 @@ const Home = ({ToastContainer}) => {
         
         <section className='container'>
             <SportCompany styles = {styles}/>
+        </section>
+
+        <section>
+            <ShopByClass styles={styles}/>
         </section>
 
         <section>

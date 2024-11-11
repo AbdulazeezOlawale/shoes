@@ -10,6 +10,7 @@ import Profile from './components/profile/Profile'
 import { useSelector } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import StoreComponent from './components/Store/StoreComponent/StoreComponent'
 
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/" element={<Home ToastContainer = {ToastContainer}/>} />
         <Route path="/store" element={<Store />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/store/airmax" element={<StoreComponent name={"airmax"} />} />
         {
           (user !== null && auth_token !== null) && <Route path="/profile" element={<Profile />} />
         }

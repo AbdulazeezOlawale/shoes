@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Nike Air Max DN",
+    "price": 160,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9b463612-c20c-4cbd-b791-2fb1dac5bb4e/AIR+MAX+DN+SE.png",
+    "description": "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a reactive sensation with every step. This results in a futuristic design that’s comfortable enough to wear from day to night. Go ahead—Feel the Unreal.",
+    "color": "red",
+    "id": "airmax",
+    "filter-id": "men"
+  },
+  {
+    "name": "Nike Air Max 1 Essential",
+    "price": 99.97,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9ccf4d80-052e-4639-bbf1-73b05c91824a/NIKE+AIR+MAX+1+ESS.png",
+    "description": "Meet the leader of the pack. Walking on clouds above the noise, the Air Max 1 blends timeless design with cushioned comfort. Sporting a Max Air unit and mixed materials, this icon hit the scene in ‘87 and continues to be the soul of the franchise today.",
+    "color": "gold",
+    "id": "airmax",
+    "filter-id": "men"
+  },
+  {
+    "name": "Nike Air Max Dn",
+    "price": 110.97,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/51a1ce16-16ec-48d5-9606-d38b838d3a47/AIR+MAX+DN+%28GS%29.png",
+    "description": "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a bouncy sensation with every step. This results in a futuristic design that's comfortable enough to wear all day. Go ahead—Feel the Unreal.",
+    "color": "grey",
+    "id": "airmax",
+    "filter-id": "kids"
+  },
+  {
+    "name": "Nike Air Max Plus Drift",
+    "price": 119.97,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c28d5e6a-10f7-4b43-a71c-14a52eb9fd7c/AIR+MAX+PLUS+DRIFT.png",
+    "description": "Let your attitude have the edge in the Air Max Plus Drift, a 'tuned' Air experience that offers premium stability and cushioning. Featuring airy mesh, gradient coloring and the original wavy design lines, it celebrates your defiant style.",
+    "color": "blue",
+    "id": "airmax",
+    "filter-id": "men"
+  },
+  {
+    "name": "Nike Cortez Vintage Suede",
+    "price": 70.97,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9c360f3f-b14e-4763-bfc9-1ccad81e740f/W+NIKE+CORTEZ+VNTG.png",
+    "description": "You spoke. We listened. Based on your feedback, we've revamped the original Cortez while maintaining the retro appeal you know and love. Now with a wider toe area and firmer side panels, you can comfortably wear them day in and day out. Plus, reengineered materials help prevent warping or creasing. Cortez fans—this one’s for you.",
+    "color": "milk",
+    "id": "cortez",
+    "filter-id": "women"
+  },
+  {
+    "name": "Nike Zoom Vomero Roam",
+    "price": 70.97,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b3bddda6-c1f4-4a29-8d19-eae50f8e4747/NIKE+ZOOM+VOMERO+ROAM.png",
+    "description": "Designed for city conditions, this winterized version of the Vomero is made for wet weather. Durable materials and a rubber mudguard work together to help safeguard your shoes from dirt and puddles. Plus, a chunky midsole gives you a visible boost of comfort and style wherever you wander.",
+    "color": "black",
+    "id": "vomero",
+    "filter-id": "men"
+  },
+  {
+    "name": "Nike Air Force 1 ’07",
+    "price": 135,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bc8cab4c-f0fb-4c69-949f-55ae78b7aa84/AIR+FORCE+1+%2707.png",
+    "description": "Comfortable, durable and timeless—it’s number 1 for a reason. This version of the iconic AF1 is all about the details: Quilted lining, debossed suede and soft, genuine leather. Of course, we kept the same durable '80s construction and Nike Air cushioning for that legendary AF1 style and comfort.",
+    "color": "brown",
+    "id": "airforce",
+    "filter-id": "men"
+  },
+  {
+    "name": "Nike Dunk High Retro SE",
+    "price": 135,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1437b31b-50ce-46d5-889c-6bf816a96519/NIKE+DUNK+HI+RETRO+SE.png",
+    "description": "You can always count on a classic. The Dunk High pairs iconic color blocking with premium materials and plush padding for game-changing comfort that lasts. The possibilities are endless—how will you wear your Dunks?",
+    "color": "green",
+    "id": "dunk",
+    "filter-id": "men"
+  },
+  {
+    "name": "Air Jordan 1 Retro Low",
+    "price": 120,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fbdda0f2-05f8-495d-8284-6e2828bb0a2b/AIR+JORDAN+1+RETRO+LOW+OG+%28GS%29.png",
+    "description": "This AJ1 Retro is something special. Glow-in-the-dark details make for a hidden surprise. The result? A pair of kicks every adult will be jealous of.",
+    "color": "green",
+    "id": "airjordan",
+    "filter-id": "kid"
+  },
+  {
+    "name": "Nike Offcourt Adjust",
+    "price": 40,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c125be2d-52c3-4dcb-9f70-268993ffcdf2/NIKE+OFFCOURT+ADJUST+SLIDE.png",
+    "description": "Post game, errands and more—adjust your comfort on the go. The adjustable, padded strap lets you perfect your fit, while the lightweight foam midsole brings first-class comfort to your feet.",
+    "color": "green",
+    "id": "offcort",
+    "filter-id": "casual"
+  },
+  {
+    "name": "Nike Pegasus 41 Premium",
+    "price": 150,
+    "size": [7, 8, 9, 10, 11, 12],
+    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7dc517a9-853d-4d13-8db4-dcd62c670654/AIR+ZOOM+PEGASUS+41+PRM.png",
+    "description": "Responsive cushioning in the winterized Pegasus provides an energized ride for everyday road running, day or night. Experience lighter-weight energy return with dual Air Zoom units and a ReactX foam midsole. Plus, reflective paint covers the midsole and extends onto the upper to light up your route.",
+    "color": "green",
+    "id": "runners",
+    "filter-id": "runners"
+  }
+]
