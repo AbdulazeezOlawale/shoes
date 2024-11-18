@@ -30,8 +30,6 @@ const SelectComponent = ({data, checkData, name}) => {
         localStorage.setItem(name, JSON.stringify(isChecked));        
     }, [isChecked, name]);
 
-    
-
     const selectedItems = useSelector(state => state.selectedItems);
     const dispatch = useDispatch();
 

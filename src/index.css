@@ -208,3 +208,30 @@ p {
   color: black;
   font-weight: bolder;
 }
+
+body {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #4a69e2;
+  --sb-size: 10px;
+}
+
+::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 23px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 23px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}

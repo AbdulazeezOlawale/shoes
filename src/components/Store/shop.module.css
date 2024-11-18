@@ -6,7 +6,7 @@
     height: 400px;
     background-image: url(../../../public/images/shop-banner.jpg);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: top;
     object-fit: cover;
     background-size: cover;
     border-radius: 64px;
@@ -42,7 +42,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
 }
 
 .shop_cataloge .heading .heading_text h2 {
@@ -57,22 +56,35 @@
 }
 
 .cataloge {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 40px;
+    position: relative;
+    margin-bottom: 4rem;
 }
 
 .cataloge_filter {
-    width: 260px;
+    margin-top: 2rem;
+    width: 300px;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+
+.sidebar {
+    display: block;
+    padding: 0rem 1rem 4rem 0rem;
+    position: sticky;
+    top: 2rem;
+    height: 100dvh;
+    overflow-y: scroll;
 }
 
 .cataloge_filter .cataloge_filter_heading h3 {
     font-size: 24px;
     font-weight: 500;
-}
-
-.cataloge_list {
-    flex-grow: 1;
 }
 
 .component_heading {
@@ -185,4 +197,77 @@
 
 .checkbox_container .checkbox_label {
     font-size: 16px;
+}
+
+.cataloge_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+    gap: 20px;
+}
+
+.product_item .product_item_image {
+    position: relative;
+    border-radius: 24px;
+}
+
+.product_item .product_item_image button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+}
+
+.product_item .product_item_image>img {
+    border: 5px solid #D2D1D3;
+    height: 100%;
+    border-radius: 24px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.product_desc {
+    padding: 8px 0
+}
+
+.product_desc small {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+}
+
+.product_desc small:last-child {
+    color: #4A69E2;
+    margin-top: .4rem;
+}
+
+.product_item .add_tocart {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: #232321;
+    border: 2px solid transparent;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+}
+
+.product_item .add_tocart:hover {
+    background-color: transparent;
+    border: 2px solid #232321;
+    color: #232321;
+
+}
+
+.product_item .product_item_image button {
+    background-color: transparent;
+    height: 24px;
+    cursor: pointer;
+    width: 24px;
+}
+
+.product_item .product_item_image button img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }

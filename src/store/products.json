@@ -1,112 +1,148 @@
-[
-  {
-    "name": "Nike Air Max DN",
-    "price": 160,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9b463612-c20c-4cbd-b791-2fb1dac5bb4e/AIR+MAX+DN+SE.png",
-    "description": "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a reactive sensation with every step. This results in a futuristic design that’s comfortable enough to wear from day to night. Go ahead—Feel the Unreal.",
-    "color": "red",
-    "id": "airmax",
-    "filter-id": "men"
-  },
-  {
-    "name": "Nike Air Max 1 Essential",
-    "price": 99.97,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9ccf4d80-052e-4639-bbf1-73b05c91824a/NIKE+AIR+MAX+1+ESS.png",
-    "description": "Meet the leader of the pack. Walking on clouds above the noise, the Air Max 1 blends timeless design with cushioned comfort. Sporting a Max Air unit and mixed materials, this icon hit the scene in ‘87 and continues to be the soul of the franchise today.",
-    "color": "gold",
-    "id": "airmax",
-    "filter-id": "men"
-  },
-  {
-    "name": "Nike Air Max Dn",
-    "price": 110.97,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/51a1ce16-16ec-48d5-9606-d38b838d3a47/AIR+MAX+DN+%28GS%29.png",
-    "description": "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes, creating a bouncy sensation with every step. This results in a futuristic design that's comfortable enough to wear all day. Go ahead—Feel the Unreal.",
-    "color": "grey",
-    "id": "airmax",
-    "filter-id": "kids"
-  },
-  {
-    "name": "Nike Air Max Plus Drift",
-    "price": 119.97,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c28d5e6a-10f7-4b43-a71c-14a52eb9fd7c/AIR+MAX+PLUS+DRIFT.png",
-    "description": "Let your attitude have the edge in the Air Max Plus Drift, a 'tuned' Air experience that offers premium stability and cushioning. Featuring airy mesh, gradient coloring and the original wavy design lines, it celebrates your defiant style.",
-    "color": "blue",
-    "id": "airmax",
-    "filter-id": "men"
-  },
-  {
-    "name": "Nike Cortez Vintage Suede",
-    "price": 70.97,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9c360f3f-b14e-4763-bfc9-1ccad81e740f/W+NIKE+CORTEZ+VNTG.png",
-    "description": "You spoke. We listened. Based on your feedback, we've revamped the original Cortez while maintaining the retro appeal you know and love. Now with a wider toe area and firmer side panels, you can comfortably wear them day in and day out. Plus, reengineered materials help prevent warping or creasing. Cortez fans—this one’s for you.",
-    "color": "milk",
-    "id": "cortez",
-    "filter-id": "women"
-  },
-  {
-    "name": "Nike Zoom Vomero Roam",
-    "price": 70.97,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b3bddda6-c1f4-4a29-8d19-eae50f8e4747/NIKE+ZOOM+VOMERO+ROAM.png",
-    "description": "Designed for city conditions, this winterized version of the Vomero is made for wet weather. Durable materials and a rubber mudguard work together to help safeguard your shoes from dirt and puddles. Plus, a chunky midsole gives you a visible boost of comfort and style wherever you wander.",
-    "color": "black",
-    "id": "vomero",
-    "filter-id": "men"
-  },
-  {
-    "name": "Nike Air Force 1 ’07",
-    "price": 135,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bc8cab4c-f0fb-4c69-949f-55ae78b7aa84/AIR+FORCE+1+%2707.png",
-    "description": "Comfortable, durable and timeless—it’s number 1 for a reason. This version of the iconic AF1 is all about the details: Quilted lining, debossed suede and soft, genuine leather. Of course, we kept the same durable '80s construction and Nike Air cushioning for that legendary AF1 style and comfort.",
-    "color": "brown",
-    "id": "airforce",
-    "filter-id": "men"
-  },
-  {
-    "name": "Nike Dunk High Retro SE",
-    "price": 135,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1437b31b-50ce-46d5-889c-6bf816a96519/NIKE+DUNK+HI+RETRO+SE.png",
-    "description": "You can always count on a classic. The Dunk High pairs iconic color blocking with premium materials and plush padding for game-changing comfort that lasts. The possibilities are endless—how will you wear your Dunks?",
-    "color": "green",
-    "id": "dunk",
-    "filter-id": "men"
-  },
-  {
-    "name": "Air Jordan 1 Retro Low",
-    "price": 120,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fbdda0f2-05f8-495d-8284-6e2828bb0a2b/AIR+JORDAN+1+RETRO+LOW+OG+%28GS%29.png",
-    "description": "This AJ1 Retro is something special. Glow-in-the-dark details make for a hidden surprise. The result? A pair of kicks every adult will be jealous of.",
-    "color": "green",
-    "id": "airjordan",
-    "filter-id": "kid"
-  },
-  {
-    "name": "Nike Offcourt Adjust",
-    "price": 40,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c125be2d-52c3-4dcb-9f70-268993ffcdf2/NIKE+OFFCOURT+ADJUST+SLIDE.png",
-    "description": "Post game, errands and more—adjust your comfort on the go. The adjustable, padded strap lets you perfect your fit, while the lightweight foam midsole brings first-class comfort to your feet.",
-    "color": "green",
-    "id": "offcort",
-    "filter-id": "casual"
-  },
-  {
-    "name": "Nike Pegasus 41 Premium",
-    "price": 150,
-    "size": [7, 8, 9, 10, 11, 12],
-    "images": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7dc517a9-853d-4d13-8db4-dcd62c670654/AIR+ZOOM+PEGASUS+41+PRM.png",
-    "description": "Responsive cushioning in the winterized Pegasus provides an energized ride for everyday road running, day or night. Experience lighter-weight energy return with dual Air Zoom units and a ReactX foam midsole. Plus, reflective paint covers the midsole and extends onto the upper to light up your route.",
-    "color": "green",
-    "id": "runners",
-    "filter-id": "runners"
-  }
-]
+{
+  "productsItem":[
+    {
+      
+      "price": "$160",
+      "name":"Nike Air DT Max '96",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a6a1c721-c960-4cb9-b512-fbf59e90edaa/AIR+DT+MAX+%2796.png"
+    },
+    {
+      
+      "price": "$170",
+      "name":"Nike Air Max Dn",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c87c2889-0ea8-4f37-b2f5-e2aa241e47c7/AIR+MAX+DN.png"
+    },
+    {
+      
+      "price": "$150",
+      "name":"Nike Air Max 90 LV8",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a75b5f09-be21-457c-bbd7-283f59f0e519/NIKE+AIR+MAX+90+LV8.png"
+    },
+    {
+      
+      "price": "$160",
+      "name":"Nike Air Max Dn",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/256d967e-35a5-48f2-9cb7-a4ef6dd6745b/W+AIR+MAX+DN.png"
+    },
+    {
+      
+      "price": "$130",
+      "name":"Nike Air Max Dn",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3b1c74e9-746d-4935-ac4f-e928f185502c/AIR+MAX+DN+%28GS%29.png"
+    },
+    {
+      
+      "price": "$100",
+      "name":"Nike Air Max 90",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a421ef35-c070-4393-b52b-2f4f3668b70a/AIR+MAX+90+%28GS%29.png"
+    },
+    {
+      
+      "price": "$140",
+      "name":"Nike Air Max 1",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4927f3e2-b271-4255-844b-772b66ba9f66/NIKE+AIR+MAX+1.png"
+    },
+    {
+      
+      "price": "$160",
+      "name":"Nike Air Max 270",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/472c42c9-e06a-4413-9ea4-aef0294cf451/AIR+MAX+270.png"
+    },
+    {
+      
+      "price": "$105.97",
+      "name":"Nike Air Max 1",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4c92f0a2-289a-404b-905c-ffbd29ea1189/W+NIKE+AIR+MAX+1.png"
+    },
+    {
+      
+      "price": "$160",
+      "name":"Nike Air Max 270",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/226b98bf-8241-43e7-b9a8-156116c38ad8/W+AIR+MAX+270.png"
+    },
+    {
+      
+      "price": "$130",
+      "name":"Nike Air Max 270",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a28b1224-26bc-46ce-abbd-6551e95c92bd/NIKE+AIR+MAX+270+%28GS%29.png"
+    },
+    {
+      
+      "price": "$110",
+      "name":"Nike Air Max 270",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/wp9wnijsbcm2thkcy0fd/NIKE+AIR+MAX+270+%28PS%29.png"
+    },
+    {
+      
+      "price": "$80",
+      "name":"Nike Air Max 270",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b9434be7-f541-4727-ad2c-2928a2ca4a76/NIKE+AIR+MAX+270+%28TD%29.png"
+    },
+    {
+      
+      "price": "$152.97",
+      "name":"Nike Air VaporMax 2021 FK",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/870053fc-75fb-4fcc-b426-a111a8d0048f/AIR+VAPORMAX+2021+FK+%28GS%29.png"
+    },
+    {
+      
+      "price": "$127.97",
+      "name":"Nike Air Max 2013",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e949cceb-7e46-4ef5-9d75-c917570149b0/AIR+MAX+2013+%28GS%29.png"
+    },
+    {
+      
+      "price": "$153.97",
+      "name":"Nike Air Max 90",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fc1900db-659e-4cc2-a550-4da77b4c56ce/AIR+MAX+90.png"
+    },
+    {
+      
+      "price": "$99.97",
+      "name":"Nike Air Max SC",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b5c34784-6250-4a85-b626-c919095c16c2/NIKE+AIR+MAX+SC.png"
+    },
+    {
+      
+      "price": "$69.97",
+      "name":"Nike Air Max 2013",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a79a8b65-a7d3-447c-806c-6a77a7f2f3c6/AIR+MAX+2013.png"
+    },
+    {
+      
+      "price": "$119.97",
+      "name":"Nike Air Max Excee",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a807e808-00f3-4eef-8881-7518fb1be5eb/WMNS+NIKE+AIR+MAX+EXCEE.png"
+    },
+    {
+      
+      "price": "$76.97",
+      "name":"Nike Air VaporMax 2023 Flyknit",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4f52ef3e-b196-42d8-b82b-3728696d4239/AIR+VAPORMAX+2023+FK.png"
+    },
+    {
+      
+      "price": "$168.97",
+      "name":"Nike Air Max Plus Drift",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f387b1c6-f5e3-42c5-8975-daf9b1745b1c/AIR+MAX+PLUS+DRIFT.png"
+    },
+    {
+      
+      "price": "$119.97",
+      "name":"Nike Air VaporMax 2023 Flyknit",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a1d14ebc-03e9-403e-afa4-0205884b1a97/AIR+VAPORMAX+2023+FK.png"
+    },
+    {
+      
+      "price": "$178.97",
+      "name":"Nike Air Max 90 LTR",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/duxuyy0r8xqremamd7ts/NIKE+AIR+MAX+90+LTR+%28GS%29.png"
+    },
+    {
+      
+      "price": "$85.97",
+      "name":"Nike Air Max 90 Futura",
+      "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ec16324f-7769-4486-9c21-8f237574ada6/W+AIR+MAX+90+FUTURA.png"
+    }
+  ]
+}
