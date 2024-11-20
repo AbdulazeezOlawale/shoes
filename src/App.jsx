@@ -10,6 +10,7 @@ import Profile from './components/profile/Profile'
 import { useSelector } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import FavouriteSection from './components/FavouriteSection/FavouriteSection'
 
 
 const App = () => {
@@ -35,6 +36,9 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         {
           (user !== null && auth_token !== null) && <Route path="/profile" element={<Profile />} />
+        }
+        {
+          (user !== null && auth_token !== null) && <Route path="/liked" element={<FavouriteSection />} />
         }
         <Route path="*" element={<Navigate to="/" replace />} />
         {

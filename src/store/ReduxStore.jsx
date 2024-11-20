@@ -3,31 +3,33 @@ import { createStore, applyMiddleware } from 'redux';
 // Load initial state from localStorage
 const loadStateFromLocalStorage = () => {
   try {
-    const serializedItems = localStorage.getItem('selectedItems');
-    const serializedUser = localStorage.getItem('user');
-    const authToken = localStorage.getItem('authToken');
+    const serializedItems = localStorage.getItem("selectedItems");
+    const serializedUser = localStorage.getItem("user");
+    const authToken = localStorage.getItem("authToken");
 
     return {
       selectedItems: serializedItems ? JSON.parse(serializedItems) : [],
       user: serializedUser ? JSON.parse(serializedUser) : null,
-      authToken: authToken ? JSON.parse(authToken) : null
+      authToken: authToken || null
     };
   } catch (error) {
-    console.error('Failed to load state from localStorage:', error);
+    console.error("Failed to load state from localStorage:", error);
     return { selectedItems: [], user: null, authToken: null };
   }
 };
 
+
 // Save state to localStorage
 const saveStateToLocalStorage = (state) => {
   try {
-    localStorage.setItem('selectedItems', JSON.stringify(state.selectedItems));
-    localStorage.setItem('user', JSON.stringify(state.user));
-    localStorage.setItem('authToken', state.authToken);
+    localStorage.setItem("selectedItems", JSON.stringify(state.selectedItems));
+    localStorage.setItem("user", JSON.stringify(state.user));
+    localStorage.setItem("authToken", state.authToken);
   } catch (error) {
-    console.error('Failed to save state to localStorage:', error);
+    console.error("Failed to save state to localStorage:", error);
   }
 };
+
 
 // Redux middleware to synchronize state with localStorage
 const localStorageMiddleware = (store) => (next) => (action) => {

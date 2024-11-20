@@ -9,8 +9,8 @@ const NavBar = () => {
     const dispatch = useDispatch();
 
     const handleLogout = () => {
-        dispatch(clearUser()); // Dispatch the CLEAR_USER action to reset user state
-        localStorage.removeItem('user'); // Optional: Remove from localStorage if needed
+        dispatch(clearUser());
+        localStorage.removeItem('user');
     };
 
     const user = useSelector((state) => state.user);
@@ -40,7 +40,7 @@ const NavBar = () => {
                     <Link to="/cart">
                         <li>
                             <div className={styles.nav_icon}>
-                                <img src="https://img.icons8.com/?size=100&id=kqlTT3Fp2Ga1&format=png&color=000000" alt="contact" />
+                                <img src="https://img.icons8.com/?size=100&id=kqlTT3Fp2Ga1&format=png&color=000000" alt="cart" />
                             </div>
                         </li>
                     </Link>
@@ -49,7 +49,17 @@ const NavBar = () => {
                         (user || auth_token) && <Link to="/profile">
                             <li>
                                 <div className={styles.nav_icon}>
-                                    <img src="https://img.icons8.com/?size=100&id=0j6tDxtI4hv1&format=png&color=000000" alt="contact" />
+                                    <img src="https://img.icons8.com/?size=100&id=0j6tDxtI4hv1&format=png&color=000000" alt="profile" />
+                                </div>
+                            </li>
+                        </Link>
+                    }
+
+                    {
+                        (user || auth_token) && <Link to="/liked">
+                            <li>
+                                <div className={styles.nav_icon}>
+                                    <img src="https://img.icons8.com/?size=100&id=86721&format=png&color=000000" alt="favourite" />
                                 </div>
                             </li>
                         </Link>

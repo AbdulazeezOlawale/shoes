@@ -35,7 +35,7 @@ code {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1500px;
   width: 90%;
   margin: 0 auto;
 }
@@ -168,6 +168,7 @@ p {
 .footer_bottom .logo img {
   height: 100%;
   width: 100%;
+  transform: translateY(.3rem);
 }
 
 .shop_by_class .swiper {

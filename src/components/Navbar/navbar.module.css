@@ -2,6 +2,7 @@ nav {
     margin-top: 1rem;
     width: 100vw;
     z-index: 10000000;
+    transform: translateX(-.3rem);
 }
 
 .navbar {

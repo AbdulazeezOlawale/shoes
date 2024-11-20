@@ -1,26 +1,18 @@
 import React from 'react'
-import styles from './favourite.module.css';
 
-const Favourite = ({data, handleButtonClick, bool}) => {
-
-    const getDataCollection = (item, index) => {
-        const favItem = {
-            item_data: item,
-            index_no: index
-        }
-    }
-
+const Favourite = ({data, styles, handleButtonClick, bool}) => {
+    console.log(data);
+    
   return (
     <>
-      {data.length > 0 ? (
-            data.map((item, index) => (
+      {
+        data.map((item, index) => (
             <div key={item.id} className={styles.product_item}>
                 <div className={styles.product_item_image}>
                     <img src={item.image} alt={item.name} />
                     <button className="fav"
                         onClick={() => {
                             handleButtonClick(index);
-                            getDataCollection(item, index);
                         }}
                     >
                         {bool[index] === true ? (
@@ -42,10 +34,8 @@ const Favourite = ({data, handleButtonClick, bool}) => {
                 </div>
                 <button className={styles.add_tocart}>Add to cart</button>
             </div>
-            ))
-        ) : (
-            <p>Loading data...</p>
-        )}
+        ))
+      }
     </>
   )
 }
