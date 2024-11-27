@@ -1,10 +1,13 @@
 import React from 'react'
 import { reviews } from '../../store/Data'
+import TitleAnimation from './Animations/TitleAnimation'
 
 const Reviews = ({styles}) => {
   return (
     <div className={`container ${styles.reviews}`}>
-        <h1>Reviews</h1>
+      <h1>
+        <TitleAnimation text="REVIEWS"/>
+      </h1>
         <ul>
             {
                 reviews.map((item, index) => (

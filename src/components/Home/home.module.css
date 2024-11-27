@@ -6,6 +6,9 @@
     font-size: 190px;
     font-weight: bold;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero h1 span {
@@ -115,7 +118,7 @@
 }
 
 .reviews h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 400;
     margin-bottom: 40px;
 }
@@ -170,7 +173,7 @@
 }
 
 .shop_by_class h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 400;
     margin-bottom: 40px;
 }

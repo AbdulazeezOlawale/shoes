@@ -10,11 +10,14 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import TitleAnimation from '../Home/Animations/TitleAnimation';
 
 const ShopByClass = ({styles}) => {
   return (
     <div className={`container ${styles.shop_by_class}`}>
-      <h1>SHOP BY CLASS</h1>
+      <h1>
+        <TitleAnimation text="SHOP BY CLASS"/>
+      </h1>
     
         <section className='shop_by_class'>
             <Swiper
