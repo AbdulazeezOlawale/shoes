@@ -1,8 +1,6 @@
 import React from 'react'
 
-const Favourite = ({data, styles, handleButtonClick, bool}) => {
-    console.log(data);
-    
+const Favourite = ({data, styles, handleButtonClick, bool}) => {    
   return (
     <>
       {

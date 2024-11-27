@@ -29,9 +29,9 @@ const CatalogeList = ({ styles }) => {
                 const querySnapshot = await getDocs(collection(db, "favorites"));
                 const items = [];
                 querySnapshot.forEach((doc) => {
-                    console.log(doc.data().id);
+                    console.log(doc.id);
                     
-                    items.push({ ...doc.data() });
+                    items.push({ id: doc.data().id, ...doc.data(), current_id: doc.id });
                 });
                 setFavData(items);
             } catch (error) {
@@ -43,35 +43,12 @@ const CatalogeList = ({ styles }) => {
     }, []);
 
     
-    
-    const getDataCollection = async (item, index) => {
-        const favItem = {...item, index_no: index}
-
-        if (favData.length > 0) {
-            try {
-                const querySnapshot = await getDocs(collection(db, "favorites"));
-                const items = [];
-                querySnapshot.forEach((doc) => {
-                    console.log(doc.data().id);
-                    
-                    items.push({ ...doc.data() });
-                });
-                setFavData(items);
-            } catch (error) {
-                console.error("Error fetching documents:", error);
-            }
-        }
-
-        try {
-            // Add the favItem to a Firestore collection
-            const docRef = await addDoc(collection(db, "favorites"), favItem);
-            console.log("Document written with ID: ", docRef.id);
-        } catch (error) {
-            console.error("Error adding document: ", error);
-        }
+    const mapData = (index, favItem) => {
         
         favData.map((fav_item) => {
-            if (favData.length === 0 || fav_item.index_no !== index) {
+            console.log("index_no: " + fav_item.index_no, "index: " + index);
+            
+            if (favData.length > 0 && fav_item.index_no !== index) {
                 // remove the item from firestore
                 const checkForDuplicate = async() => {
                     try {
@@ -83,7 +60,7 @@ const CatalogeList = ({ styles }) => {
                     }
                 }
                 checkForDuplicate();
-            }else if (fav_item.index_no === index) {
+            }else if (favData.length > 0 && fav_item.index_no === index) {
                 // need to fix the favorites id
                 const deleteItemFromFirestore = async (itemId) => {
                     try {
@@ -95,19 +72,61 @@ const CatalogeList = ({ styles }) => {
                         console.error("Error deleting document:", error);
                     }
                 };
-                
+                deleteItemFromFirestore(fav_item.current_id);
             }
             return 0;
-        })        
-    };
-    console.log("data:");
-    console.log(data);
-
-    console.log("favData:");
-    console.log(favData);
-
+        }) 
+    }
     
+    const getDataCollection = async (item, index) => {
+        const favItem = {...item, index_no: index};
+        
+        if (favData.length === 0) {
+            try {
+                // Add the favItem to a Firestore collection
+                const docRef = await addDoc(collection(db, "favorites"), favItem);
+                console.log("Document written with ID: ", docRef.id);
+            } catch (error) {
+                console.error("Error adding document: ", error);
+            }
+            
+            console.log("Nothing is in favData array");
 
+            try {
+                const querySnapshot = await getDocs(collection(db, "favorites"));
+                const items = [];
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.id);
+                    
+                    items.push({ id: doc.data().id, ...doc.data(), current_id: doc.id });
+                });
+                setFavData(items);
+            } catch (error) {
+                console.error("Error fetching documents:", error);
+            }
+            
+        } else{
+            console.log("something is in favData array");
+            
+            try {
+                const querySnapshot = await getDocs(collection(db, "favorites"));
+                const items = [];
+                querySnapshot.forEach((doc) => {
+                    console.log(doc.id);
+                    
+                    items.push({ id: doc.data().id, ...doc.data(), current_id: doc.id });
+                });
+                setFavData(items);
+            } catch (error) {
+                console.error("Error fetching documents:", error);
+            }
+        }
+        
+        console.log(favData);
+        mapData(index, favItem);
+    };
+
+    // this function check and uncheck the fav icon
     const handleButtonClick = (index) => {
         const updatedBool = [...bool];
         updatedBool[index] = !updatedBool[index];
