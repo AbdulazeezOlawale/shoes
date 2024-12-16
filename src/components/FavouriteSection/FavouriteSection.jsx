@@ -1,8 +1,9 @@
 import { collection, getDocs } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
-import { db } from '../../firebaseConfig';
+import { db } from '../../firebase';
 import Favourite from '../Store/Favourite/Favourite';
 import styles from './favouriteSection.module.css'
+
 
 const FavouriteSection = () => {
     const [data, setData] = useState([]);

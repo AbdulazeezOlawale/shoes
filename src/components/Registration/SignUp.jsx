@@ -2,22 +2,10 @@ import React, { useState } from 'react';
 import styles from "../Registration/signup.module.css"
 import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const SignUp = ({notifyMe}) => {
+const SignUp = () => {
   
-	const notify = () => toast.success("Sign Up successful !");
-
-  fetch('https://e-commerce-backend-9a82.onrender.com/user/all_users/')
-    .then((res) => (
-      res.json()
-    ))
-    .then((data) => (
-      console.log(data)
-      
-    ))
-
   const [name, setName] = useState(["Welcome Back👋", "We are happy to have you back"]);
   const [tag, settag] = useState("Sign Up");
   
@@ -47,7 +35,7 @@ const SignUp = ({notifyMe}) => {
         </div>
 
         <section className={styles.form}>
-          {tag === "Log In" ? <LoginForm name={name} styles={styles} func = {chanageToSignUp} ToastContainers={ToastContainer} notifyMe={notifyMe}/> : <SignUpForm name={name} styles={styles} func = {changeToLogin} toast = {notify}/>}
+          {tag === "Log In" ? <LoginForm name={name} styles={styles} func = {chanageToSignUp} /> : <SignUpForm name={name} styles={styles} func = {changeToLogin}/>}
         </section>
       </div>
     </div>

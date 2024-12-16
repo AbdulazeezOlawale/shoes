@@ -1,20 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from  '../Navbar/navbar.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { clearUser } from '../../store/ReduxStore';
 
 const NavBar = () => {
+    const [user, setUser] = useState(null);
+    const [guser, setGuser] = useState(null);
     
-    const dispatch = useDispatch();
 
-    const handleLogout = () => {
-        dispatch(clearUser());
-        localStorage.removeItem('user');
-    };
+    const storedUser = JSON.parse(localStorage.getItem('user-id'));
+    
+    storedUser && console.log(storedUser);
+    
 
-    const user = useSelector((state) => state.user);
-    const auth_token = useSelector((state) => state.authToken);
 
     return (
         <nav>
@@ -46,7 +43,7 @@ const NavBar = () => {
                     </Link>
 
                     {
-                        (user || auth_token) && <Link to="/profile">
+                        (user || guser) && <Link to="/profile">
                             <li>
                                 <div className={styles.nav_icon}>
                                     <img src="https://img.icons8.com/?size=100&id=0j6tDxtI4hv1&format=png&color=000000" alt="profile" />
@@ -56,7 +53,7 @@ const NavBar = () => {
                     }
 
                     {
-                        (user || auth_token) && <Link to="/liked">
+                        (user || guser) && <Link to="/liked">
                             <li>
                                 <div className={styles.nav_icon}>
                                     <img src="https://img.icons8.com/?size=100&id=86721&format=png&color=000000" alt="favourite" />
@@ -73,13 +70,13 @@ const NavBar = () => {
                 <div className={styles.search_container}>  
 
                     {
-                        (user === null && auth_token === null) && <div className={styles.reg}>
+                        (user === null || guser === null) && <div className={styles.reg}>
                             <Link className={styles.signup} to='/register'>Sign Up</Link>
                         </div> 
                     } 
 
                     {
-                        (user !== null || auth_token !== null) && <div onClick={() => handleLogout()} className={styles.reg}>
+                        (user || guser) && <div className={styles.reg}>
                             <Link className={styles.signup} to='/'>Logout</Link>
                         </div>
                     }

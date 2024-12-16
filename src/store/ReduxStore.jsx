@@ -4,17 +4,13 @@ import { createStore, applyMiddleware } from 'redux';
 const loadStateFromLocalStorage = () => {
   try {
     const serializedItems = localStorage.getItem("selectedItems");
-    const serializedUser = localStorage.getItem("user");
-    const authToken = localStorage.getItem("authToken");
 
     return {
       selectedItems: serializedItems ? JSON.parse(serializedItems) : [],
-      user: serializedUser ? JSON.parse(serializedUser) : null,
-      authToken: authToken || null
     };
   } catch (error) {
     console.error("Failed to load state from localStorage:", error);
-    return { selectedItems: [], user: null, authToken: null };
+    return { selectedItems: [], user: null};
   }
 };
 
@@ -23,8 +19,6 @@ const loadStateFromLocalStorage = () => {
 const saveStateToLocalStorage = (state) => {
   try {
     localStorage.setItem("selectedItems", JSON.stringify(state.selectedItems));
-    localStorage.setItem("user", JSON.stringify(state.user));
-    localStorage.setItem("authToken", state.authToken);
   } catch (error) {
     console.error("Failed to save state to localStorage:", error);
   }
@@ -44,24 +38,6 @@ const initialState = loadStateFromLocalStorage();
 // Action Types
 const SELECT_ITEM = 'SELECT_ITEM';
 const DESELECT_ITEM = 'DESELECT_ITEM';
-const SET_USER = 'SET_USER';
-const CLEAR_USER = 'CLEAR_USER';
-const SET_AUTH_TOKEN = 'SET_AUTH_TOKEN';
-
-// Action Creators
-export const setUser = (userData) => ({
-  type: SET_USER,
-  payload: userData
-});
-
-export const setAuthToken = (token) => ({
-  type: SET_AUTH_TOKEN,
-  payload: token
-});
-
-export const clearUser = () => ({
-  type: CLEAR_USER
-});
 
 // Reducer function
 const reducer = (state = initialState, action) => {
@@ -75,22 +51,6 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         selectedItems: state.selectedItems.filter((item) => item !== action.payload),
-      };
-    case SET_USER:
-      return {
-        ...state,
-        user: action.payload
-      };
-    case SET_AUTH_TOKEN:
-      return {
-        ...state,
-        authToken: action.payload
-      };
-    case CLEAR_USER:
-      return {
-        ...state,
-        user: null,
-        authToken: null
       };
     default:
       return state;

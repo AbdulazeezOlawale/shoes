@@ -18,13 +18,12 @@ import { LettersPullUp } from './Animations/LettersPullUp';
 import BannerAnimation from './Animations/BannerAnimation';
 import SliderAnimation from './Animations/SliderAnimation';
 
-const Home = ({ToastContainer}) => {
+const Home = () => {
     
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <section className={styles.home}>
-        <ToastContainer/>
 
         <div className={styles.hero}>
             <h1>

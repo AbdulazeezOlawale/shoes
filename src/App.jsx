@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Store from './components/Store/Store'
@@ -7,20 +7,16 @@ import Headroom from 'react-headroom'
 import SignUp from './components/Registration/SignUp'
 import Cart from './components/cart/Cart'
 import Profile from './components/profile/Profile'
-import { useSelector } from 'react-redux'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import FavouriteSection from './components/FavouriteSection/FavouriteSection'
 import SliderAnimation from './components/Home/Animations/SliderAnimation'
 
 
 const App = () => {
 
-	const notify = () => toast.success("Login successful !");
+  const [user, setUser] = useState(null);
+  const [guser, setGuser] = useState(null);
+    
   
-  // access google oauth data from redux
-  const user = useSelector((state) => state.user);
-  const auth_token = useSelector((state) => state.authToken);
   
 
   return (
@@ -32,18 +28,18 @@ const App = () => {
       </div>
 
       <Routes>
-        <Route path="/" element={<Home ToastContainer = {ToastContainer}/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/store" element={<Store />} />
         <Route path="/cart" element={<Cart />} />
         {
-          (user !== null && auth_token !== null) && <Route path="/profile" element={<Profile />} />
+          (user || guser) && <Route path="/profile" element={<Profile />} />
         }
         {
-          (user !== null && auth_token !== null) && <Route path="/liked" element={<FavouriteSection />} />
+          (user || guser) && <Route path="/liked" element={<FavouriteSection />} />
         }
         <Route path="*" element={<Navigate to="/" replace />} />
         {
-          (user === null && auth_token === null) && <Route path='/register' element={<SignUp notifyMe = {notify}/>}/>
+          (user === null || guser === null) && <Route path='/register' element={<SignUp/>}/>
         }
       </Routes>
       

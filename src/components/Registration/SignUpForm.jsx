@@ -1,58 +1,70 @@
 import React, { useState } from 'react'
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { doc, setDoc, collection } from 'firebase/firestore';
+import { auth, db, googleProvider } from '../../firebase';
 
-const SignUpForm = ({styles, name, func, toast}) => {
-
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-
-  // logging in through postman's data
-  async function signupUser(email, password, confirmPassword) {
+const SignUpForm = ({styles, name, func,}) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+  async function signUpWithEmail(e) {
+    e.preventDefault();
     try {
-      console.log('Attempting sign up with:', { email, password, confirmPassword });
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const uid = userCredential.user.uid;
+      
+      
+      // Create user Firestore collections
+      await setDoc(doc(db, "users", uid), {
+        email,
+        createdAt: new Date(),
+      });
+      await setDoc(doc(collection(db, "users", uid, "myCollections")), {});
+      await setDoc(doc(collection(db, "users", uid, "favorites")), {});
 
-      const response = await fetch('https://e-commerce-backend-9a82.onrender.com/auth/users/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password, "re_password": confirmPassword }),
+      localStorage.setItem('user-id', uid);
+
+      console.log("User signed up and Firestore collections created");
+    } catch (error) {
+      console.error("Error signing up:", error);
+    }
+    
+  }
+  
+  const signUpWithGoogle = async (e) => {
+    e.preventDefault();
+    try {
+      // Sign in with Google
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+
+      // Create Firestore collections for the new user
+      const userDocRef = doc(db, "users", user.uid);
+      await setDoc(userDocRef, {
+        email: user.email,
+        displayName: user.displayName,
       });
 
-      if (!response.ok) {
-        const errorData = await response.json(); // parse error message if available
-        throw new Error(`Sign up failed: ${errorData?.message || 'Unknown error'}`);
-      }
+      const myCollectionsRef = doc(db, `users/${user.uid}/myCollections/info`);
+      await setDoc(myCollectionsRef, {});
 
-      const data = await response.json();
-      console.log('Signup successful:', data);
-      return data; // Return data to handle it in handleSignup if needed
-    } catch (error) {
-      console.error('Error signing up in:', error.message);
-      throw error; // Re-throw the error if you need to handle it in the caller
-    }
-  }
+      const favoriteRef = doc(db, `users/${user.uid}/favorite/info`);
+      await setDoc(favoriteRef, {});
 
-  const handleSignup = async (e) => {
-    e.preventDefault();
-    
-    try {
-      const userData = await signupUser(email, password, confirmPassword);
-      console.log('User data:', userData);
-      func();
-      // handle signup success actions here, like storing user data
-      toast();
+      
+      localStorage.setItem('g-user-id', user.uid);
+
+      console.log("User signed up and Firestore collections created!");
     } catch (error) {
-      console.error('Signup error:', error);
-      // Optionally, display error to the user
+      console.error("Error during sign-up:", error.message);
     }
   };
-
+  
   return (
-    <form onSubmit={handleSignup}>  
+    <form onSubmit={signUpWithEmail}>  
         <div className={styles.heading}>
-            <h1>{name[0]}</h1>
-            <small>{name[1]}</small>
+          <h1>{name[0]}</h1>
+          <small>{name[1]}</small>
         </div>
         
         <div className={styles.input_fields}>
@@ -76,17 +88,19 @@ const SignUpForm = ({styles, name, func, toast}) => {
               onChange={(e) => setPassword(e.target.value)} 
             />
 
-            <label htmlFor="repassword">Confirm Password*</label>
-            <input 
-              id='repassword' 
-              placeholder='Password' 
-              type="password" 
-              value={confirmPassword} 
-              required
-              onChange={(e) => setConfirmPassword(e.target.value)} 
-            />
-
             <button>SUBMIT</button>
+
+            <p style={{textAlign: 'center'}}>or</p>
+            <br />
+        </div>
+
+        <div className={styles.signup_with_google}>
+          <button onClick={signUpWithGoogle}> 
+            <img src="https://img.icons8.com/?size=100&id=JvOSspDsPpwP&format=png&color=000000" alt="" />
+            <small>
+              Sign Up with Google
+            </small>
+          </button>
         </div>
 
         <div className={styles.input_footer}>

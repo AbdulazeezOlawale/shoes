@@ -188,3 +188,27 @@
     transition: all .3s ease-in-out;
     text-decoration: underline;
 }
+
+.signup_with_google button {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid #79767C;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signup_with_google button img {
+    height: 30px;
+}
+
+.signup_with_google button small {
+    font-size: 16px;
+}
