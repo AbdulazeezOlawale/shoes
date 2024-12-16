@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { doc, setDoc, collection } from 'firebase/firestore';
 import { auth, db, googleProvider } from '../../firebase';
 
-const SignUpForm = ({styles, name, func,}) => {
+const SignUpForm = ({styles, name, func, changeState}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
@@ -23,7 +23,7 @@ const SignUpForm = ({styles, name, func,}) => {
       await setDoc(doc(collection(db, "users", uid, "favorites")), {});
 
       localStorage.setItem('user-id', uid);
-
+      changeState();
       console.log("User signed up and Firestore collections created");
     } catch (error) {
       console.error("Error signing up:", error);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Store from './components/Store/Store'
@@ -13,17 +13,33 @@ import SliderAnimation from './components/Home/Animations/SliderAnimation'
 
 const App = () => {
 
-  const [user, setUser] = useState(null);
-  const [guser, setGuser] = useState(null);
-    
+  const [user, setUser] = useState(null)
+  const [guser, setGuser] = useState(null)
+
+  useEffect(() => {
+      const storedUser = localStorage.getItem('user-id');
+      const storedGUser = localStorage.getItem('g-user-id');
+      setUser(storedUser);
+      setGuser(storedGUser);
+
+      console.log('User data updated:', { user: storedUser, guser: storedGUser });
+  }, []);
   
+  const changeState = () => {
+      const storedUser = localStorage.getItem('user-id');
+      const storedGUser = localStorage.getItem('g-user-id');
+      setUser(storedUser);
+      setGuser(storedGUser);
+  
+      console.log('User data updated:', { user: storedUser, guser: storedGUser });
+  } 
   
 
   return (
     <div>
       <div className="nav-bar">
         <Headroom>
-          <NavBar/>
+          <NavBar user={user} guser={guser}/>
         </Headroom>
       </div>
 
@@ -39,7 +55,7 @@ const App = () => {
         }
         <Route path="*" element={<Navigate to="/" replace />} />
         {
-          (user === null || guser === null) && <Route path='/register' element={<SignUp/>}/>
+          (user === null && guser === null) && <Route path='/register' element={<SignUp changeState = {changeState}/>}/>
         }
       </Routes>
       

@@ -1,15 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from  '../Navbar/navbar.module.css';
 
-const NavBar = () => {
-    const [user, setUser] = useState(null);
-    const [guser, setGuser] = useState(null);
-    
-
-    const storedUser = JSON.parse(localStorage.getItem('user-id'));
-    
-    storedUser && console.log(storedUser);
+const NavBar = ({user, guser}) => {  
     
 
 
@@ -70,7 +62,7 @@ const NavBar = () => {
                 <div className={styles.search_container}>  
 
                     {
-                        (user === null || guser === null) && <div className={styles.reg}>
+                        (user === null && guser === null) && <div className={styles.reg}>
                             <Link className={styles.signup} to='/register'>Sign Up</Link>
                         </div> 
                     } 

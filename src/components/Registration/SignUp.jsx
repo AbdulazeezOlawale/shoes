@@ -4,7 +4,7 @@ import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
 import 'react-toastify/dist/ReactToastify.css';
 
-const SignUp = () => {
+const SignUp = ({changeState}) => {
   
   const [name, setName] = useState(["Welcome Back👋", "We are happy to have you back"]);
   const [tag, settag] = useState("Sign Up");
@@ -35,7 +35,7 @@ const SignUp = () => {
         </div>
 
         <section className={styles.form}>
-          {tag === "Log In" ? <LoginForm name={name} styles={styles} func = {chanageToSignUp} /> : <SignUpForm name={name} styles={styles} func = {changeToLogin}/>}
+          {tag === "Log In" ? <LoginForm name={name} styles={styles} func = {chanageToSignUp} /> : <SignUpForm name={name} styles={styles} func = {changeToLogin} changeState={changeState}/>}
         </section>
       </div>
     </div>
