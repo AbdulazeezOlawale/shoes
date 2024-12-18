@@ -26,12 +26,12 @@ const App = () => {
   }, []);
   
   const changeState = () => {
-      const storedUser = localStorage.getItem('user-id');
-      const storedGUser = localStorage.getItem('g-user-id');
-      setUser(storedUser);
-      setGuser(storedGUser);
-  
-      console.log('User data updated:', { user: storedUser, guser: storedGUser });
+    const storedUser = localStorage.getItem('user-id');
+    const storedGUser = localStorage.getItem('g-user-id');
+    setUser(storedUser);
+    setGuser(storedGUser);
+
+    console.log('User data updated:', { user: storedUser, guser: storedGUser });
   } 
   
 
@@ -39,7 +39,7 @@ const App = () => {
     <div>
       <div className="nav-bar">
         <Headroom>
-          <NavBar user={user} guser={guser}/>
+          <NavBar user={user} guser={guser} changeState = {changeState}/>
         </Headroom>
       </div>
 

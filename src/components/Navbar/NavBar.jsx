@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 import styles from  '../Navbar/navbar.module.css';
 
-const NavBar = ({user, guser}) => {  
+const NavBar = ({user, guser, changeState}) => {  
     
-
+    const logout = () => {
+        localStorage.removeItem("g-user-id");
+        localStorage.removeItem("user-id");
+        changeState();
+    }
 
     return (
         <nav>
@@ -69,7 +73,7 @@ const NavBar = ({user, guser}) => {
 
                     {
                         (user || guser) && <div className={styles.reg}>
-                            <Link className={styles.signup} to='/'>Logout</Link>
+                            <Link className={styles.signup} to='/' onClick={() => logout()}>Logout</Link>
                         </div>
                     }
 

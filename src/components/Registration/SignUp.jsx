@@ -35,7 +35,7 @@ const SignUp = ({changeState}) => {
         </div>
 
         <section className={styles.form}>
-          {tag === "Log In" ? <LoginForm name={name} styles={styles} func = {chanageToSignUp} /> : <SignUpForm name={name} styles={styles} func = {changeToLogin} changeState={changeState}/>}
+          {tag === "Log In" ? <LoginForm name={name} styles={styles} func = {chanageToSignUp} changeState = {changeState}/> : <SignUpForm name={name} styles={styles} func = {changeToLogin} changeState={changeState}/>}
         </section>
       </div>
     </div>

@@ -47,12 +47,13 @@ const SignUpForm = ({styles, name, func, changeState}) => {
 
       const myCollectionsRef = doc(db, `users/${user.uid}/myCollections/info`);
       await setDoc(myCollectionsRef, {});
-
+      
       const favoriteRef = doc(db, `users/${user.uid}/favorite/info`);
       await setDoc(favoriteRef, {});
-
+      
       
       localStorage.setItem('g-user-id', user.uid);
+      changeState();
 
       console.log("User signed up and Firestore collections created!");
     } catch (error) {
